@@ -7,3 +7,7 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 // Try breaking down the expression and using documentation to explain what it means
 // It will help to think about the order in which expressions are evaluated
 // Try logging the value of num and running the program several times to build an idea of what the program is doing
+
+console.log(num);
+
+// num represents a randomly generated integer between 1 and 100 inclusive. The combination of Math.random(), arithmetic operations, and Math.floor() allows us to generate a random integer within the specified range effectively.
