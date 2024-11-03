@@ -14,3 +14,4 @@ function square(num) {
 // Uncaught SyntaxError: Unexpected number
 
 // The parameter of a function cannot be a value like 3. Instead, it should be a valid identifier 
+console.log(square(2));
