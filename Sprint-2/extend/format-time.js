@@ -11,7 +11,7 @@ function formatAs12HourClock(time) {
   } else if (hours > 12) {
     return `${hours - 12}:00 pm`; // Afternoon
   } else {
-    return `${hours}:00 am`; // Morning 
+    return `0${hours}:00 am`; // Morning 
   }
 }
 
@@ -35,3 +35,5 @@ console.assert(
   currentOutput1 === targetOutput1,
   `current output: ${currentOutput1}, target output: ${targetOutput1}`
 );
+
+
