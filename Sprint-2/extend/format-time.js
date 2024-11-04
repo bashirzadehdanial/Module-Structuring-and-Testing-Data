@@ -3,10 +3,16 @@
 
 function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
-  if (hours > 12) {
-    return `${hours - 12}:00 pm`;
+
+  if (hours === 0) {
+    return `12:00 am`; // Midnight
+  } else if (hours === 12) {
+    return `12:00 pm`; // Noon 
+  } else if (hours > 12) {
+    return `${hours - 12}:00 pm`; // Afternoon
+  } else {
+    return `${hours}:00 am`; // Morning 
   }
-  return `${time} am`;
 }
 
 const currentOutput = formatAs12HourClock("08:00");
@@ -16,9 +22,16 @@ console.assert(
   `current output: ${currentOutput}, target output: ${targetOutput}`
 );
 
-const currentOutput2 = formatAs12HourClock("23:00");
-const targetOutput2 = "11:00 pm";
+const currentOutput0 = formatAs12HourClock("23:00");
+const targetOutput0 = "11:00 pm";
 console.assert(
-  currentOutput2 === targetOutput2,
-  `current output: ${currentOutput2}, target output: ${targetOutput2}`
+  currentOutput0 === targetOutput0,
+  `current output: ${currentOutput0}, target output: ${targetOutput0}`
+);
+
+let currentOutput1 = formatAs12HourClock("00:00");
+let targetOutput1 = "12:00 am";
+console.assert(
+  currentOutput1 === targetOutput1,
+  `current output: ${currentOutput1}, target output: ${targetOutput1}`
 );
