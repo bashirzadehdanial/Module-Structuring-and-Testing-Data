@@ -13,3 +13,13 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+
+function toUpperCaseWords(word){
+  const uppercaseContainer = word.toUpperCase();// Convert the string to uppercase
+  const replaceSpace = uppercaseContainer.replace(/ /g, "_"); // Replace spaces with underscores
+  return replaceSpace;
+}
+
+
+console.log(toUpperCaseWords("danial bashirzadeh"));
