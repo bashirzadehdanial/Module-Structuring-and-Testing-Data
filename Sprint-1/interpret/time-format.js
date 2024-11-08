@@ -1,13 +1,21 @@
 const movieLength = -4444; // length of movie in seconds
 
+if (movieLength < 0) {
+    console.log("Invalid movie length");
+} else if (movieLength === 0) {
+    console.log("0:0:0"); 
+} else{
+
 const remainingSeconds = movieLength % 60;
 const totalMinutes = (movieLength - remainingSeconds) / 60;
 
 const remainingMinutes = totalMinutes % 60;
 const totalHours = (totalMinutes - remainingMinutes) / 60;
 
-const MovieDuration = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
-console.log(MovieDuration);
+const movieDuration = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
+console.log(movieDuration);
+
+}
 
 // For the piece of code above, read the code and then answer the following questions
 
