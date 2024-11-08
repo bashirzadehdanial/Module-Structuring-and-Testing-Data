@@ -10,7 +10,7 @@ const num = 56.5678;
 
 let wholeNumberPart = Math.floor(num);
 let decimalPart = (num - wholeNumberPart).toFixed(4);
-let roundedNum = Math.ceil(num);
+let roundedNum = Math.round(num);
 
 console.log(wholeNumberPart);
 console.log(decimalPart);

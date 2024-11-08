@@ -19,12 +19,10 @@ console.log(`The base part of ${filePath} is ${base}`);
 
 const cleanedFilePath = filePath.replace(/\s+/g, "").trim();
 console.log(cleanedFilePath);
-const dir = cleanedFilePath.slice(0, lastSlashIndex + 1);
-console.log(dir);
-const nameAndExt = base.split(".");
-console.log(nameAndExt);
-const ext = nameAndExt[1];
-console.log(ext);
+const dir = cleanedFilePath.slice(0, lastSlashIndex + 1); 
+console.log(`The dir part of ${filePath} is ${dir}`)
+const ext = base.substring(base.lastIndexOf(".") + 1); 
+console.log(`The extension part of ${filePath} is ${ext}`);
 
 
 
