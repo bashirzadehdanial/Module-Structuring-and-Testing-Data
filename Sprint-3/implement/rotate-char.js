@@ -12,6 +12,33 @@
 // When the function rotateCharacter is called with these inputs,
 // Then it should:
 
+function rotateCharacter(character, shiftValue) {
+  
+  if (typeof character !== "string" || character.length !== 1) {
+    return "unchanged"; 
+  }
+
+  
+  if (character >= "a" && character <= "z") {
+    return String.fromCharCode(
+      ((((character.charCodeAt(0) - 97 + shiftValue) % 26) + 26) % 26) + 97
+    );
+  }
+
+  
+  if (character >= "A" && character <= "Z") {
+    return String.fromCharCode(
+      ((((character.charCodeAt(0) - 65 + shiftValue) % 26) + 26) % 26) + 65
+    );
+  }
+
+  return character;
+}
+
+console.log(rotateCharacter(3));
+
+
+
 // Scenario: Rotate Lowercase Letters:
 // Given a lowercase letter character and a positive integer shift,
 // When the function is called with these inputs,
