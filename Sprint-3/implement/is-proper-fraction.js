@@ -50,11 +50,7 @@ function isProperFraction(numerator, denominator) {
   } 
 }
 
-console.log(isProperFraction(2, 3));  
-console.log(isProperFraction(5, 2));   
-console.log(isProperFraction(-4, 7));
-console.log(isProperFraction(3, 3));
-console.log(isProperFraction(3, 0));
+module.exports = { isProperFraction };
 
  
 
