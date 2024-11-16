@@ -42,6 +42,10 @@ function getAngleType(angle) {
   }
 }
 
-console.log(getAngleType(180));
+module.exports = {getAngleType};
+
+
+
+
 
 
