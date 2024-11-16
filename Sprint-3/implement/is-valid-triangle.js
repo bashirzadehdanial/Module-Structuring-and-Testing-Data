@@ -49,6 +49,4 @@ function isValidTriangle(a, b, c) {
   return true;
 }
 
-console.log(isValidTriangle(3, 3, 3))
-console.log(isValidTriangle(-1, 2, 3))
-console.log(isValidTriangle(0, 3, 4));
+module.exports = {isValidTriangle};
