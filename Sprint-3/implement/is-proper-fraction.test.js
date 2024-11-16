@@ -7,3 +7,7 @@ test("Function should throw an error when the denominator is zero, as it's not a
 test("Function should return false if denominator is equal to numerator, because it is not a proper fraction", () => {
   expect(isProperFraction(3, 3)).toBe(false);
 });
+
+test("Function should return true if numerator is smaller than denumerator, because it is a proper fraction", () => {
+  expect(isProperFraction(2, 3)).toBe(true);
+});
