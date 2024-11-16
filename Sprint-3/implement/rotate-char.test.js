@@ -10,6 +10,10 @@ test("It should rotate the uppercase letter by shift positions within the upperc
   expect(rotateCharacter("F", 1)).toBe("G");
 });
 
+test("It should return the character unchanged as the given character is not a letter", () => {
+  expect(rotateCharacter("7", 5)).toBe("7");
+});
+
 
 
 
