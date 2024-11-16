@@ -11,3 +11,7 @@ test("Function should return false if denominator is equal to numerator, because
 test("Function should return true if numerator is smaller than denumerator, because it is a proper fraction", () => {
   expect(isProperFraction(2, 3)).toBe(true);
 });
+
+test("Function should return true if numerator is greater than denumerator, because it is a proper fraction", () => {
+  expect(isProperFraction(4, 3)).toBe(false);
+});
