@@ -30,8 +30,7 @@
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
 
-<<<<<<< HEAD
-=======
+
 function getCardValue(card) {
   let rank;
   if (card.length === 1 && card >= "2" && card <= "9") {
@@ -60,23 +59,3 @@ function getCardValue(card) {
 
 module.exports = {getCardValue}
 
-console.log(getCardValue("10"));
-
-// function getCardValue(card) {
-//   if (card.length === 1 && card >= "2" && card <= "9") {
-    
-//     return parseInt(card);
-//   } 
-//   if (card === "10" || card === "J" || card === "Q" || card === "K") {
-   
-//     return 10;
-//   } 
-//   if (card === "A") {
-    
-//     return 11; 
-//   }
-   
-// }
-
-// module.exports = { getCardValue };
->>>>>>> 90f6f61 (Add test for Function should throw an error when the denominator is zero)
