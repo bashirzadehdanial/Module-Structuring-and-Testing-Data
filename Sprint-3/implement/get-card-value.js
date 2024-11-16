@@ -31,49 +31,20 @@
 // Then it should throw an error indicating "Invalid card rank."
 
 function getCardValue(card) {
-  let rank;
-  if (card.length === 1 && card >= "2" && card <= "9") {
-    return parseInt(card);
-    
+  
+  let rank = card.slice(0, -1); 
+  if (rank >= "2" && rank <= "9") {
+    return parseInt(rank);
   }
-  if (card.length == 2){
-    if(card == "10"){
-      return card
-    }
-    if (rank === "A") {
-        return 11;
-      }
-      else{
-            rank = card.slice(0, -1);
-
-             if (rank === "J" || rank === "Q" || rank === "K") {
-              return 10;
-            }
-       
-
-  } 
+  if (rank === "10" || rank === "J" || rank === "Q" || rank === "K") {
+    return 10; 
+  }
+  if (rank === "A") {
+    return 11; 
+  }
   throw new Error("Invalid card rank");
 }
-}
 
-module.exports = {getCardValue}
+module.exports = { getCardValue };
 
-console.log(getCardValue("10"));
 
-// function getCardValue(card) {
-//   if (card.length === 1 && card >= "2" && card <= "9") {
-    
-//     return parseInt(card);
-//   } 
-//   if (card === "10" || card === "J" || card === "Q" || card === "K") {
-   
-//     return 10;
-//   } 
-//   if (card === "A") {
-    
-//     return 11; 
-//   }
-   
-// }
-
-// module.exports = { getCardValue };
