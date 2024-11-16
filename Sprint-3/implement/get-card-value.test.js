@@ -21,6 +21,7 @@ test("should return 10 for K♠", () => {
   expect(getCardValue("K♠")).toBe(10);
 });
 
+
 test("should return 11 for A♠", () => {
   expect(getCardValue("A♠")).toBe(11);
 });
