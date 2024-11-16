@@ -12,6 +12,35 @@
 // When the function rotateCharacter is called with these inputs,
 // Then it should:
 
+<<<<<<< HEAD
+=======
+function rotateCharacter(character, shiftValue) {
+  
+  if (typeof character !== "string" || character.length !== 1) {
+    return "unchanged"; 
+  }
+
+  
+  if (character >= "a" && character <= "z") {
+    return String.fromCharCode(
+      ((((character.charCodeAt(0) - 97 + shiftValue) % 26) + 26) % 26) + 97
+    );
+  }
+
+  if (character >= "A" && character <= "Z") {
+    return String.fromCharCode(
+      ((((character.charCodeAt(0) - 65 + shiftValue) % 26) + 26) % 26) + 65
+    );
+  }
+
+  return character;
+}
+
+console.log(rotateCharacter(3));
+
+
+
+>>>>>>> 7dde649 (Add test for rotateCharacter function as it should rotate the lowercase letter by shift positions within the lowercase alphabet)
 // Scenario: Rotate Lowercase Letters:
 // Given a lowercase letter character and a positive integer shift,
 // When the function is called with these inputs,
@@ -41,3 +70,6 @@ console.log(rotateCharacter("7", 5)); // Output: "7" (unchanged, not a letter)
 // And the function should return the rotated character as a string (e.g., 'z' rotated by 3 should become 'c', 'Z' rotated by 3 should become 'C').
 console.log(rotateCharacter("z", 1)); // Output: "a" (preserves case, but wraps around)
 console.log(rotateCharacter("Y", 2)); // Output: "A" (preserves case, but wraps around)
+
+
+module.exports = {rotateCharacter};
