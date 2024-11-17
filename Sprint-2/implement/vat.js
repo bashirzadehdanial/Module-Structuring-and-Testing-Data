@@ -10,9 +10,32 @@
 // it returns the new price with VAT added on
 
 function priceWithVatCalculation(price, rate){
-    const totalPrice = price * rate;
-    return totalPrice
+    
+    let totalPrice
+
+    
+    if (typeof rate === "string" && rate.includes("%")) {
+        const floatNum = rate.slice(0,-1)
+        rate = floatNum / 100
+        totalPrice = (price * rate) + price;
+        return totalPrice;
+    } 
+    
+    if (typeof rate === "number" && rate>0) {
+        
+      totalPrice = (price * rate) + price;
+      return totalPrice;
+    }
+
+    if (rate <= 0) {
+      console.log("Invalid rate");
+      return null;
+    }
+    
+    
 }
 
-console.log(priceWithVatCalculation(50,1.2));
-console.log(priceWithVatCalculation(25, 1.5));
+console.log(priceWithVatCalculation(50, "20%"));
+
+console.log(priceWithVatCalculation(50, 0.2));
+
