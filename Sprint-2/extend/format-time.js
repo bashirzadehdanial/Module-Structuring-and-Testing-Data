@@ -2,21 +2,26 @@
 // Your task is to write tests for as many different groups of input data or edge cases as you can, and fix any bugs you find.
 
 function formatAs12HourClock(time) {
-  const hours = Number(time.slice(0, 2));
+  const [hourString, minuteString] = time.split(":");
+  let hours = Number(hourString)
+  const minutes = minuteString ? minuteString : "00";
+  
+  
 
   if (hours === 0) {
-    return `12:00 am`; // Midnight
+    return `12:${minutes} am`; // Midnight
   } else if (hours === 12) {
-    return `12:00 pm`; // Noon 
+    return `12:${minutes} pm` // Noon 
   } else if (hours > 12) {
-    return `${hours - 12}:00 pm`; // Afternoon
+    return `${hours - 12}:${minutes} pm` // Afternoon
   } else {
-    return `0${hours}:00 am`; // Morning 
+    return `${hours}:${minutes} am` // Morning 
   }
 }
 
+
 const currentOutput = formatAs12HourClock("08:00");
-const targetOutput = "08:00 am";
+const targetOutput = "8:00 am";
 console.assert(
   currentOutput === targetOutput,
   `current output: ${currentOutput}, target output: ${targetOutput}`
@@ -51,8 +56,26 @@ console.assert(
 );
 
 let currentOutput4 = formatAs12HourClock("01:00");
-let targetOutput4 = "01:00 am";
+let targetOutput4 = "1:00 am";
 console.assert(
   currentOutput4 === targetOutput4,
   `current output: ${currentOutput4}, target output: ${targetOutput4}`
 );
+
+let currentOutput5 = formatAs12HourClock("15:30");
+let targetOutput5 = "3:30 pm";
+console.assert(
+  currentOutput5 === targetOutput5,
+  `current output: ${currentOutput5}, target output: ${targetOutput5}`
+);
+
+let currentOutput6 = formatAs12HourClock("7:30");
+let targetOutput6 = "7:30 am";
+console.assert(
+  currentOutput6 === targetOutput6,
+  `current output: ${currentOutput6}, target output: ${targetOutput6}`
+);
+
+
+
+
