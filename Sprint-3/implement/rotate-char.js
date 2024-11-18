@@ -64,3 +64,6 @@ function rotateCharacter(character, shiftValue) {
 }
 
 console.log(rotateCharacter(3));
+
+
+module.exports = { rotateCharacter };
