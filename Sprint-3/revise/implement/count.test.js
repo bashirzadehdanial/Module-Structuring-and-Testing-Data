@@ -28,6 +28,16 @@ function countChar(str, char) {
   return count;
 }
 
-console.log(countChar("aaaaa", "a"));
-console.log(countChar("Multiple Occurrences", "c"));
-console.log(countChar("Danial Bashirzadeh", "P"));
+describe("countChar", () => {
+  test('counts occurrences of character "a" in "aaaaa"', () => {
+    expect(countChar("aaaaa", "a")).toBe(5);
+  });
+
+  test('counts occurrences of character "c" in "Multiple Occurrences"', () => {
+    expect(countChar("Multiple Occurrences", "c")).toBe(3);
+  });
+
+  test('returns 0 for character "P" in "Danial Bashirzadeh"', () => {
+    expect(countChar("Danial Bashirzadeh", "P")).toBe(0);
+  });
+});
