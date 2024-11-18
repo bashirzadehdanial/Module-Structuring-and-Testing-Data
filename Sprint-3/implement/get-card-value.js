@@ -52,3 +52,5 @@ function getCardValue(card) {
 
 console.log(getCardValue("Q♥"));
 
+
+module.exports = { getCardValue };
