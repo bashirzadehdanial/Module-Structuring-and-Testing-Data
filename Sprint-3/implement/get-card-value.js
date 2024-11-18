@@ -30,21 +30,25 @@
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
 
+
+
 function getCardValue(card) {
-  
-  let rank = card.slice(0, -1); 
+  const rank = card.slice(0, -1);
+
   if (rank >= "2" && rank <= "9") {
     return parseInt(rank);
   }
+
   if (rank === "10" || rank === "J" || rank === "Q" || rank === "K") {
-    return 10; 
+    return 10;
   }
+
   if (rank === "A") {
-    return 11; 
+    return 11;
   }
+
   throw new Error("Invalid card rank");
 }
 
-module.exports = { getCardValue };
-
+console.log(getCardValue("Q♥"));
 
