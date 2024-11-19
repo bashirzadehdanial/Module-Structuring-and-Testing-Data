@@ -62,7 +62,7 @@ function repeat(str, count) {
   });
 
   test("should throw an error if count is negative", () => {
-    expect(() => repeat("abc", -1)).toThrow("Count cannot be negative.");
+    expect(() => repeat("abc", -1)).toThrow("Negative counts are not valid.");
   });
 
   test("should handle repeating an empty string", () => {
