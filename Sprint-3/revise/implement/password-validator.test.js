@@ -47,18 +47,18 @@ function isValidPassword(password, previousPasswords) {
 
 describe('isValidPassword', () => {
 
-  const previousPasswords = ["Danial123?", "helloWorld1", "Test@123"];
+  const previousPasswords = ["Danial$1", "helloWorld1", "Test@123"];
 
   test('should return false if password is less than 5 characters', () => {
     expect(isValidPassword('1234', previousPasswords)).toBe(false);
   });
 
   test('should return false if password has no uppercase letter', () => {
-    expect(isValidPassword('danial123?', previousPasswords)).toBe(false);
+    expect(isValidPassword("danial$1", previousPasswords)).toBe(false);
   });
 
   test('should return false if password has no lowercase letter', () => {
-    expect(isValidPassword('DANIAL123?', previousPasswords)).toBe(false);
+    expect(isValidPassword("DANIAL$1", previousPasswords)).toBe(false);
   });
 
   test('should return false if password has no digit', () => {
@@ -66,14 +66,14 @@ describe('isValidPassword', () => {
   });
 
   test('should return false if password has no special symbol', () => {
-    expect(isValidPassword('Danial123', previousPasswords)).toBe(false);
+    expect(isValidPassword("Danial1", previousPasswords)).toBe(false);
   });
 
   test('should return false if password is a previous password', () => {
-    expect(isValidPassword('Danial123?', previousPasswords)).toBe(false);
+    expect(isValidPassword("Danial$1", previousPasswords)).toBe(false);
   });
 
   test('should return true if password meets all requirements', () => {
-    expect(isValidPassword('Danial123!', previousPasswords)).toBe(true);
+    expect(isValidPassword("Danial$2", previousPasswords)).toBe(true);
   });
 })
