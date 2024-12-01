@@ -19,6 +19,16 @@ test("It should rotate the character by shift positions within the alphabet whil
   expect(rotateCharacter("Y", 2)).toBe("A");
 });
 
+test("It should rotate the uppercase letter by shift positions within the uppercase alphabet", () => {
+  expect(() => rotateCharacter("Z", -100)).toThrow("Invalid input");
+});
+
+
+test("It should ", () => {
+  expect(rotateCharacter("Y", 100)).toBe("U");
+});
+
+
 
 
 

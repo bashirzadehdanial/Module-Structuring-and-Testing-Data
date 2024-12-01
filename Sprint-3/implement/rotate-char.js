@@ -14,9 +14,15 @@
 
 
 function rotateCharacter(character, shiftValue) {
+
+  
   
   if (typeof character !== "string" || character.length !== 1) {
     return "unchanged"; 
+  }
+
+  if (shiftValue < 0) {
+    throw new Error("Invalid input");
   }
 
   
