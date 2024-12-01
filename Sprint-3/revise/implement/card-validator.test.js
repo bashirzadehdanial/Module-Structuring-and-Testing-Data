@@ -34,10 +34,7 @@ a92332119c011112 (invalid characters)
 
 // Function to validate a credit card number
 function isValidCreditCard(cardNumber) {
-  // Check if the card number has exactly 16 digits
-  if (cardNumber.length !== 16) {
-    return false; // Invalid if not exactly 16 digits
-  }
+ 
 
   // Check if the card number consists only of digits
   if (!/^\d{16}$/.test(cardNumber)) {
