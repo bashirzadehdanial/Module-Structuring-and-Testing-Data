@@ -36,6 +36,11 @@
 
 
 function isProperFraction(numerator, denominator) {
+
+  if(numerator<0 || denominator<0){
+    throw new Error("Negative value is not acceptable");
+    
+  }
   
   if (denominator === 0) {
     throw new Error("Denominator cannot be zero");
