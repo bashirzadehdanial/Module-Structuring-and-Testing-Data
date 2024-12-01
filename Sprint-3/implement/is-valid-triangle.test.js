@@ -12,6 +12,9 @@ test("It should return false, if any of the length be a negative number", () => 
   expect(isValidTriangle(-1, 2, 6)).toEqual(false);
 });
 
+test("It should return false, if any of the length be a negative number", () => {
+  expect(isValidTriangle(1, 0, -2)).toEqual(false);
+});
 
 
 
