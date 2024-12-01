@@ -22,13 +22,13 @@ function rotateCharacter(character, shiftValue) {
   
   if (character >= "a" && character <= "z") {
     return String.fromCharCode(
-      ((((character.charCodeAt(0) - 97 + shiftValue) % 26) + 26) % 26) + 97
+      (((character.charCodeAt(0) - 97 + shiftValue)  + 26) % 26) + 97
     );
   }
 
   if (character >= "A" && character <= "Z") {
     return String.fromCharCode(
-      ((((character.charCodeAt(0) - 65 + shiftValue) % 26) + 26) % 26) + 65
+      (((character.charCodeAt(0) - 65 + shiftValue)  + 26) % 26) + 65
     );
   }
 
