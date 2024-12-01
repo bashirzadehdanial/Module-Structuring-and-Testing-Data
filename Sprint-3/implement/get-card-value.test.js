@@ -38,4 +38,7 @@ test("should return 11 for A♠", () => {
    expect(() => getCardValue("XX♠")).toThrow("Invalid card rank");
  });
 
-
+// getCardValue("23♠")
+test("should throw error for card with invalid rank length", () => {
+  expect(() => getCardValue("23♠")).toThrow("Invalid card rank");
+});

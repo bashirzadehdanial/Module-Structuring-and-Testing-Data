@@ -33,7 +33,12 @@
 
 function getCardValue(card) {
   
-  let rank = card.slice(0, -1); 
+  let rank = card.slice(0, card.length-1); 
+   
+  if (card.length > 2 && rank>10) {
+    throw new Error("Invalid card rank");
+  }
+
   if (rank >= "2" && rank <= "9") {
     return parseInt(rank);
   }
