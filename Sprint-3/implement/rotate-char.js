@@ -12,8 +12,7 @@
 // When the function rotateCharacter is called with these inputs,
 // Then it should:
 
-<<<<<<< HEAD
-=======
+
 function rotateCharacter(character, shiftValue) {
   
   if (typeof character !== "string" || character.length !== 1) {
@@ -40,7 +39,7 @@ console.log(rotateCharacter(3));
 
 
 
->>>>>>> 7dde649 (Add test for rotateCharacter function as it should rotate the lowercase letter by shift positions within the lowercase alphabet)
+
 // Scenario: Rotate Lowercase Letters:
 // Given a lowercase letter character and a positive integer shift,
 // When the function is called with these inputs,
